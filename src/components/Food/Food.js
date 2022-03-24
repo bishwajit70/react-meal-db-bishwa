@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Food.css'
-import { faShoppingBag, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingBag} from '@fortawesome/free-solid-svg-icons';
 
 const Food = (props) => {
     // console.log(props)
