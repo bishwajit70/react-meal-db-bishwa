@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Food.css'
+import { faShoppingBag, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Food = (props) => {
     // console.log(props)
@@ -18,7 +20,12 @@ const Food = (props) => {
                     <Card.Text className='text-start'>
                         {strInstructions.slice(0, 100)}
                     </Card.Text>
-                    <Button onClick={() => handleAddToCart(props.meal)} variant="primary">Add To Cart</Button>
+                    <Button className='w-100' onClick={() => handleAddToCart(props.meal)} variant="primary">
+                        <h6>Add To Cart <FontAwesomeIcon className='ms-3' icon={faShoppingBag} /></h6>
+                        
+                        
+                        </Button>
+                        
                 </Card.Body>
             </Card>
         </div>
