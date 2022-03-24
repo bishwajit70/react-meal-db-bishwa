@@ -3,8 +3,11 @@ import { Button, Card } from 'react-bootstrap';
 import './Food.css'
 
 const Food = (props) => {
-    console.log(props)
-    const { strMeal, strMealThumb, strCategory, strInstructions } = props.meal
+    // console.log(props)
+    const { strMeal, strMealThumb, strCategory, strInstructions} = props.meal
+    const { handleAddToCart } = props
+
+
     return (
         <div className='col-md-4 gy-5 gx-5'>
             <Card className='h-100'>
@@ -15,15 +18,10 @@ const Food = (props) => {
                     <Card.Text className='text-start'>
                         {strInstructions.slice(0, 100)}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button onClick={() => handleAddToCart(props.meal)} variant="primary">Add To Cart</Button>
                 </Card.Body>
             </Card>
         </div>
-
-
-
-
-
     );
 };
 
