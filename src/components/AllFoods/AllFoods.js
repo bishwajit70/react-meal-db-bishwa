@@ -8,7 +8,7 @@ const AllFoods = () => {
     const [meals, setMeals] = useState([])
     // console.log(meals.idMeal)
     useEffect(() => {
-        fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=a')
+        fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=c')
             .then(res => res.json())
             .then(data => setFoods(data.meals))
     }, [])
@@ -16,7 +16,7 @@ const AllFoods = () => {
     const handleAddToCart = (meals) => {
         setMeals(meals)
     }
-
+    
     return (
         <div className='container pb-5'>
             <h3>{meals.strMeal}</h3>
